@@ -10,7 +10,8 @@ export const AppContext = createContext();
 function App() {
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
-  
+  const correctWord = "ADIEU";
+
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 4) {
       return;
@@ -43,7 +44,17 @@ function App() {
       <nav>
         <h1>WORDLE</h1>
       </nav>
-      <AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, onSelectLetter, onDelete, onEnter }}>
+      <AppContext.Provider 
+        value={{ 
+          board, 
+          setBoard, 
+          currAttempt, 
+          setCurrAttempt, 
+          onSelectLetter, 
+          onDelete, 
+          onEnter,
+          correctWord 
+          }}>
         <div className="game">
           <Board/>
           <Keyboard/>
