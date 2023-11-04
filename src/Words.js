@@ -16,9 +16,9 @@ export const generateWordSet = async () => {
     await fetch(wordBank)
     .then((response) => response.text())
     .then((result) => {
-        const wordArray = result.split("\r\n");
+        const wordArray = result.split("\n");
         wordSet = new Set(wordArray);
     });
 
-    return wordSet;
+    return { wordSet };
 }

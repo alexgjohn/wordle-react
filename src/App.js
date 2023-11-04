@@ -15,9 +15,11 @@ function App() {
 
   useEffect(() => {
     generateWordSet().then((words) => {
+      console.log(words);
       setWordSet(words.wordSet);
-    })
+    });
   }, [])
+
 
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 4) {
@@ -40,20 +42,19 @@ function App() {
   }
 
   const onEnter = () => {
+    console.log(wordSet)
     if (currAttempt.letterPos !== 5){
       return;
     }
 
     let currWord = "";
     for (let i = 0; i < 5; i++) {
-      currWord += board[currAttempt.attempt[i]];
+      currWord += board[currAttempt.attempt][i];
     }
-
     if (wordSet.has(currWord.toLowerCase())) {
-      setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 }) 
-
+      setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
-      alert("Word Not Found");
+      alert("Word not found");
     }
 
   }
