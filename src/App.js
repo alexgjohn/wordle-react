@@ -12,6 +12,7 @@ function App() {
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
   const [wordSet, setWordSet] = useState(new Set())
   const correctWord = "ADIEU";
+  const [disabledLetters, setDisabledLetters] = useState([]);
 
   useEffect(() => {
     generateWordSet().then((words) => {
@@ -42,7 +43,6 @@ function App() {
   }
 
   const onEnter = () => {
-    console.log(wordSet)
     if (currAttempt.letterPos !== 5){
       return;
     }
@@ -55,6 +55,10 @@ function App() {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
       alert("Word not found");
+    }
+
+    if (currWord === correctWord) {
+      alert("Well done!")
     }
 
   }
@@ -73,7 +77,9 @@ function App() {
           onSelectLetter, 
           onDelete, 
           onEnter,
-          correctWord 
+          correctWord ,
+          setDisabledLetters,
+          disabledLetters
           }}>
         <div className="game">
           <Board/>
