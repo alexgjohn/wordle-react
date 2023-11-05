@@ -11,7 +11,7 @@ function Letter({ letterPos, attemptVal }) {
     } = useContext(AppContext);
     const letter = board[attemptVal][letterPos];
 
-    const correct = correctWord[letterPos] === letter;
+    const correct = correctWord.toUpperCase()[letterPos] === letter;
     const almost = !correct && letter != "" && correctWord.includes(letter);
 
     //letterState will check if the guessed letter is correct, almost or simply wrong 
