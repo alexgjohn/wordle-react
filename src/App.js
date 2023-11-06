@@ -2,6 +2,7 @@ import './App.css';
 import Board from './components/Board';
 import Keyboard from './components/Keyboard';
 import GameOver from './components/GameOver';
+import Replay from './components/Replay';
 import { createContext, useState, useEffect } from 'react';
 import { boardDefault, generateWordSet } from './Words'
 
