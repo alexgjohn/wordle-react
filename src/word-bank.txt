@@ -702,6 +702,7 @@ facet
 faint
 fairy
 faith
+falls
 false
 fancy
 fanny
@@ -1335,6 +1336,7 @@ oddly
 offal
 offer
 often
+oinks
 olden
 older
 olive
