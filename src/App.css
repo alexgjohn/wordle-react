@@ -159,5 +159,15 @@ nav h1 {
     font-size: 20px; /* Adjust the font size for mobile devices */
   }
 
+  .keyboard {
+    width: 90%; /* Adjust the width for mobile screens */
+  }
+
+  .key {
+    width: 40px; /* Adjust the width of individual keys for mobile screens */
+    height: 60px; /* Adjust the height of individual keys for mobile screens */
+    font-size: 16px; /* Adjust the font size of the key labels for mobile screens */
+  }
+
   /* Add any other necessary adjustments for mobile devices */
 }
