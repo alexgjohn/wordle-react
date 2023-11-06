@@ -161,6 +161,9 @@ nav h1 {
 
   .keyboard {
     width: 90%; /* Adjust the width for mobile screens */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
 
   .key {
