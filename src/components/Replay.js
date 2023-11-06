@@ -1,8 +1,12 @@
 import React from 'react'
 
 function Replay() {
+
+    const handleClick = () => {
+        window.location.reload();
+    }
     return (
-        <button>PLAY AGAIN</button>
+        <button id="replay" onClick={handleClick}>PLAY AGAIN</button>
     )
 }
 
