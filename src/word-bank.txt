@@ -392,6 +392,7 @@ cider
 cigar
 cinch
 circa
+cited
 civic
 civil
 clack
@@ -399,6 +400,7 @@ claim
 clamp
 clang
 clank
+clans
 clash
 clasp
 class
@@ -567,6 +569,7 @@ diver
 dizzy
 dodge
 dodgy
+doggy
 dogma
 doing
 dolly
@@ -1137,6 +1140,7 @@ limit
 linen
 liner
 lingo
+lions
 lipid
 lithe
 liver
@@ -1760,6 +1764,7 @@ sinew
 singe
 siren
 sissy
+sited
 sixth
 sixty
 skate
@@ -2285,6 +2290,7 @@ woody
 wooer
 wooly
 woozy
+words
 wordy
 world
 worry

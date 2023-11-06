@@ -12,7 +12,7 @@ function Letter({ letterPos, attemptVal }) {
     const letter = board[attemptVal][letterPos];
 
     const correct = correctWord.toUpperCase()[letterPos] === letter;
-    const almost = !correct && letter != "" && correctWord.includes(letter);
+    const almost = !correct && letter != "" && correctWord.toUpperCase().includes(letter);
 
     //letterState will check if the guessed letter is correct, almost or simply wrong 
     const letterState = currAttempt.attempt > attemptVal && 

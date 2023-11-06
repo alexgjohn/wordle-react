@@ -60,7 +60,7 @@ function App() {
       alert("Word not found");
     }
 
-    if (currWord === correctWord) {
+    if (currWord.toLowerCase() === correctWord.toLowerCase()) {
       setGameOver({ gameOver: true, guessedWord: true })
       return;
     }
@@ -74,7 +74,7 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <h1>WORDLE</h1>
+        <h1>WORDLEX</h1>
       </nav>
       <AppContext.Provider 
         value={{ 
