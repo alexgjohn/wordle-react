@@ -1,31 +1,46 @@
-import React, {useContext, useEffect} from 'react';
+import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 
 function Letter({ letterPos, attemptVal }) {
-    const { 
-        board, 
-        correctWord, 
-        currAttempt, 
-        disabledLetters, 
-        setDisabledLetters 
+    const {
+    board,
+    correctWord,
+    currAttempt,
+    disabledLetters,
+    setDisabledLetters,
     } = useContext(AppContext);
     const letter = board[attemptVal][letterPos];
 
     const correct = correctWord.toUpperCase()[letterPos] === letter;
-    const almost = !correct && letter != "" && correctWord.toUpperCase().includes(letter);
+    const letterCountInCorrectWord = correctWord
+        .toUpperCase()
+        .split("")
+        .filter((char) => char === letter).length;
 
-    //letterState will check if the guessed letter is correct, almost or simply wrong 
-    const letterState = currAttempt.attempt > attemptVal && 
-    (correct ? "correct" : almost ? "almost" : "error");
+    const isLetterPresent = letterCountInCorrectWord > 0;
+    const isLetterCorrect = correct;
+    const isAlmost = isLetterPresent && !isLetterCorrect;
+
+  // Track letter states and positions
+    const letterState =
+        currAttempt.attempt > attemptVal &&
+        (isLetterCorrect
+        ? "correct"
+        : isAlmost
+        ? "almost"
+        : "error");
 
     useEffect(() => {
-        if(letter !== "" && !correct && !almost) {
-            setDisabledLetters((prev) => [...prev, letter]);
+        if (letter !== "" && !isLetterCorrect && !isAlmost) {
+        setDisabledLetters((prev) => [...prev, letter]);
         }
-    }, [currAttempt.attempt])
+    }, [currAttempt.attempt]);
+
     return (
-        <div className="letter" id={letterState}>{letter}</div>
-    )
+        <div className="letter" id={letterState}>
+        {letter}
+        </div>
+    );
 }
 
-export default Letter
+export default Letter;
