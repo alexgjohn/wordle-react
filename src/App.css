@@ -140,3 +140,24 @@ nav h1 {
   background-color: blue;
   color: palegoldenrod;
 }
+
+@media screen and (max-width: 768px) {
+  .App {
+    height: auto; /* Adjust the height for mobile devices */
+  }
+  
+  .game {
+    width: 90vw; /* Adjust the width for mobile devices */
+    padding-top: 20px; /* Adjust the padding for mobile devices */
+  }
+  
+  .board {
+    width: 90%; /* Adjust the width for mobile devices */
+  }
+  
+  .letter {
+    font-size: 20px; /* Adjust the font size for mobile devices */
+  }
+
+  /* Add any other necessary adjustments for mobile devices */
+}
