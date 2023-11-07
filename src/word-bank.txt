@@ -454,6 +454,7 @@ coven
 cover
 covet
 covey
+cowed
 cower
 coyly
 crack
@@ -573,6 +574,7 @@ doggy
 dogma
 doing
 dolly
+domed
 donor
 donut
 dopey
@@ -992,8 +994,10 @@ hobby
 hoist
 holly
 homer
+honed
 honey
 honor
+hoped
 horde
 horny
 horse
@@ -1062,6 +1066,7 @@ jewel
 jiffy
 joint
 joist
+joked
 joker
 jolly
 joust
@@ -1273,6 +1278,7 @@ mount
 mourn
 mouse
 mouth
+moved
 mover
 movie
 mower
